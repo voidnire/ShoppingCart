@@ -1,0 +1,1315 @@
+Started GET "/" for 127.0.0.1 at 2025-02-06 10:36:50 -0400
+  
+ActiveRecord::NoDatabaseError (We could not find your database: store_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.2) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.2) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-02-06 10:36:51 -0400
+  
+ActiveRecord::NoDatabaseError (We could not find your database: store_development. Available database configurations can be found in config/database.yml.
+
+To resolve this error:
+
+- Did you not create the database, or did you delete it? To create the database, run:
+
+    bin/rails db:create
+
+- Has the database name changed? Verify that config/database.yml contains the correct database name.
+):
+  
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:74:in `rescue in new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.2) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.2) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.2) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.2) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2025-02-06 10:37:41 -0400
+  [1m[35m (109.4ms)[0m  [1m[35mCREATE DATABASE "store_development" ENCODING = 'unicode'[0m
+  [1m[35m (49.7ms)[0m  [1m[35mCREATE DATABASE "store_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2025-02-06 10:37:41 -0400
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 2 pending migrations:
+
+db/migrate/20240502120014_create_products.rb
+db/migrate/20240502192736_create_carts.rb
+
+
+):
+  
+activerecord (7.1.3.2) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-02-06 10:37:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 2 pending migrations:
+
+db/migrate/20240502120014_create_products.rb
+db/migrate/20240502192736_create_carts.rb
+
+
+):
+  
+activerecord (7.1.3.2) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-02-06 14:39:00.697357', '2025-02-06 14:39:00.697360') RETURNING "key"[0m
+Migrating to CreateProducts (20240502120014)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" decimal(17,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240502120014') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCarts (20240502192736)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "total_price" decimal(17,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240502192736') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2025-02-06 10:39:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::HealthController#show as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 2895)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-02-06 10:39:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-06 10:44:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Rails::LayoutsController):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-06 10:49:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::HealthController#show as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2219)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 11:29:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/cart"):
+  
+Started GET "/products" for 127.0.0.1 at 2025-02-06 11:30:58 -0400
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 10.4ms | ActiveRecord: 9.0ms | Allocations: 14663)
+
+
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "store_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "store_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (2.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Samsung Galaxy S24 Ultra"], ["price", "12999.99"], ["created_at", "2025-02-06 15:46:55.093997"], ["updated_at", "2025-02-06 15:46:55.093997"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (2.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "iPhone 15 Pro Max"], ["price", "14999.99"], ["created_at", "2025-02-06 15:46:55.100357"], ["updated_at", "2025-02-06 15:46:55.100357"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (3.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Xiamo Mi 27 Pro Plus Master Ultra"], ["price", "999.99"], ["created_at", "2025-02-06 15:46:55.108083"], ["updated_at", "2025-02-06 15:46:55.108083"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (2.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Samsung Galaxy S24 Ultra"], ["price", "12999.99"], ["created_at", "2025-02-06 15:50:11.015455"], ["updated_at", "2025-02-06 15:50:11.015455"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (1.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "iPhone 15 Pro Max"], ["price", "14999.99"], ["created_at", "2025-02-06 15:50:11.020501"], ["updated_at", "2025-02-06 15:50:11.020501"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Xiamo Mi 27 Pro Plus Master Ultra"], ["price", "999.99"], ["created_at", "2025-02-06 15:50:11.024105"], ["updated_at", "2025-02-06 15:50:11.024105"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/products" for 127.0.0.1 at 2025-02-06 12:13:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 23.9ms | ActiveRecord: 7.0ms | Allocations: 21559)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 12:18:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cart"):
+  
+Started GET "/products" for 127.0.0.1 at 2025-02-06 12:26:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 63ms (Views: 25.2ms | ActiveRecord: 7.1ms | Allocations: 24797)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 12:26:30 -0400
+  
+SyntaxError (/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:7: syntax error, unexpected local variable or method, expecting `end' or dummy end
+    @def show
+         ^~~~
+):
+  
+app/controllers/carts_controller.rb:7: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 12:27:32 -0400
+  
+SyntaxError (/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:7: syntax error, unexpected local variable or method, expecting `end' or dummy end
+    @def show
+         ^~~~
+):
+  
+app/controllers/carts_controller.rb:7: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started GET "/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:7:" for 127.0.0.1 at 2025-02-06 12:28:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:7:"):
+  
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 12:29:25 -0400
+  
+SyntaxError (/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:7: syntax error, unexpected local variable or method, expecting `end' or dummy end
+    @def show
+         ^~~~
+/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:13: syntax error, unexpected local variable or method, expecting `end' or dummy end
+    @def show
+         ^~~~
+):
+  
+app/controllers/carts_controller.rb:7: syntax error, unexpected local variable or method, expecting `end' or dummy end
+app/controllers/carts_controller.rb:13: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 12:29:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:7: syntax error, unexpected local variable or method, expecting `end' or dummy end
+    @def show
+         ^~~~
+/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:13: syntax error, unexpected local variable or method, expecting `end' or dummy end
+    @def show
+         ^~~~
+):
+  
+app/controllers/carts_controller.rb:7: syntax error, unexpected local variable or method, expecting `end' or dummy end
+app/controllers/carts_controller.rb:13: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started GET "/products" for 127.0.0.1 at 2025-02-06 12:33:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 46ms (Views: 23.5ms | ActiveRecord: 7.8ms | Allocations: 20380)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 12:33:10 -0400
+  
+ActionController::RoutingError (uninitialized constant CartController):
+  
+Started GET "/products" for 127.0.0.1 at 2025-02-06 12:36:10 -0400
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 2.3ms | Allocations: 4098)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 12:36:22 -0400
+  
+ActionController::RoutingError (uninitialized constant CartController):
+  
+Started GET "/products" for 127.0.0.1 at 2025-02-06 12:41:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 54ms (Views: 26.2ms | ActiveRecord: 6.3ms | Allocations: 20379)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 12:41:02 -0400
+  
+ActionController::RoutingError (uninitialized constant CartController):
+  
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 12:41:07 -0400
+  
+ActionController::RoutingError (uninitialized constant CartController):
+  
+Started GET "/products" for 127.0.0.1 at 2025-02-06 12:43:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 62ms (Views: 27.0ms | ActiveRecord: 7.2ms | Allocations: 24778)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 12:43:22 -0400
+  
+Zeitwerk::NameError (expected file /home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb to define constant CartsController, but didn't):
+  
+zeitwerk (2.6.13) lib/zeitwerk/loader/callbacks.rb:33:in `on_file_autoloaded'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:27:in `require'
+activesupport (7.1.3.2) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.1.3.2) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (7.1.3.2) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.1.3.2) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.1.3.2) lib/action_dispatch/request/utils.rb:100:in `action_encoding_template'
+actionpack (7.1.3.2) lib/action_dispatch/request/utils.rb:85:in `encode'
+actionpack (7.1.3.2) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.1.3.2) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb" for 127.0.0.1 at 2025-02-06 12:43:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb"):
+  
+Started GET "/products" for 127.0.0.1 at 2025-02-06 12:46:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 22.4ms | ActiveRecord: 6.7ms | Allocations: 24802)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 12:46:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cart"):
+  
+🛒 Iniciando limpeza de carrinhos abandonados...
+  [1m[36mCart Update All (1.5ms)[0m  [1m[33mUPDATE "carts" SET "status" = $1 WHERE (updated_at < '2025-02-06 13:54:21.913554' AND status = 'ativo')[0m  [["status", "abandonado"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCart Create (3.8ms)[0m  [1m[32mINSERT INTO "carts" ("total_price", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["total_price", "0.0"], ["created_at", "2025-02-06 12:22:06.062285"], ["updated_at", "2025-02-06 13:22:06.062327"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCart Create (1.5ms)[0m  [1m[32mINSERT INTO "carts" ("total_price", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["total_price", "0.0"], ["created_at", "2025-02-06 12:23:39.250400"], ["updated_at", "2025-02-06 13:23:39.250422"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCart Create (0.5ms)[0m  [1m[32mINSERT INTO "carts" ("total_price", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["total_price", "0.0"], ["created_at", "2025-01-28 17:26:13.417198"], ["updated_at", "2025-02-06 13:26:13.417299"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCart Delete All (0.3ms)[0m  [1m[31mDELETE FROM "carts" WHERE (updated_at < '2025-01-30 17:26:39.842130')[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE (updated_at < '2025-02-06 14:28:21.386731') /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE (updated_at < '2025-02-06 14:28:21.386731') /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE (updated_at < '2025-02-06 14:28:21.386731') AND (updated_at < '2025-01-30 17:28:59.766803') /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE (updated_at < '2025-02-06 14:28:21.386731') AND (updated_at < '2025-02-06 14:29:04.298996') /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCart Delete All (1.1ms)[0m  [1m[31mDELETE FROM "carts" WHERE (updated_at < '2025-02-06 14:28:21.386731')[0m
+Started GET "/products" for 127.0.0.1 at 2025-02-06 13:34:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 22.3ms | ActiveRecord: 6.3ms | Allocations: 20377)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 13:34:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cart"):
+  
+Started GET "/products" for 127.0.0.1 at 2025-02-06 13:36:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 58ms (Views: 24.1ms | ActiveRecord: 7.1ms | Allocations: 24783)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 13:36:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cart"):
+  
+Started GET "/products" for 127.0.0.1 at 2025-02-06 13:41:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 57ms (Views: 26.3ms | ActiveRecord: 7.9ms | Allocations: 24783)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 13:41:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cart"):
+  
+Started POST "/cart/add_item" for 127.0.0.1 at 2025-02-06 13:48:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/cart/add_item"):
+  
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 13:48:57 -0400
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 5.6ms | Allocations: 175)
+
+
+  
+NoMethodError (undefined method `set_cart' for an instance of CartsController):
+  
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:403:in `block in make_lambda'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:183:in `block (2 levels) in halting_and_conditional'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:184:in `block in halting_and_conditional'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:109:in `run_callbacks'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/cart/add_item" for 127.0.0.1 at 2025-02-06 13:49:26 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/cart/add_item"):
+  
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" ORDER BY "carts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCart Create (0.8ms)[0m  [1m[32mINSERT INTO "carts" ("total_price", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["total_price", "0.0"], ["created_at", "2025-02-06 17:56:04.282669"], ["updated_at", "2025-02-06 17:56:04.282669"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 14:00:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 5.6ms | Allocations: 2786)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-02-06 14:01:08 -0400
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 17.5ms | ActiveRecord: 2.2ms | Allocations: 10794)
+
+
+Started POST "/cart/add_item" for 127.0.0.1 at 2025-02-06 14:01:13 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/cart/add_item"):
+  
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 14:01:22 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:17:in `create'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms | Allocations: 4094)
+
+
+  
+NoMethodError (undefined method `cart_items' for an instance of Hash):
+  
+app/controllers/carts_controller.rb:23:in `create'
+Started GET "/controllers/carts_controller.rb:23:in" for 127.0.0.1 at 2025-02-06 14:01:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/controllers/carts_controller.rb:23:in"):
+  
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 14:03:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 5.6ms | Allocations: 4183)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:25:37 -0400
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 424)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:25:39 -0400
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 428)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:26:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:94: else without rescue is useless
+    else
+    ^~~~
+/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:112: syntax error, unexpected `end'):
+  
+app/controllers/carts_controller.rb:94: else without rescue is useless
+app/controllers/carts_controller.rb:112: syntax error, unexpected `end'
+Started GET "/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:94:" for 127.0.0.1 at 2025-02-06 15:26:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:94:"):
+  
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 15:32:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 6.0ms | Allocations: 3530)
+
+
+  
+NameError (undefined local variable or method `cart' for an instance of CartsController):
+  
+app/controllers/carts_controller.rb:78:in `set_current_cart'
+app/controllers/carts_controller.rb:18:in `create'
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:32:31 -0400
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 89)
+
+
+  
+NameError (undefined local variable or method `cart' for an instance of CartsController):
+  
+app/controllers/carts_controller.rb:78:in `set_current_cart'
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:33:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carts_controller.rb:82:in `set_current_cart'
+  [1m[36mCart Create (1.4ms)[0m  [1m[32mINSERT INTO "carts" ("total_price", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["total_price", "0.0"], ["created_at", "2025-02-06 19:33:44.971176"], ["updated_at", "2025-02-06 19:33:44.971176"]]
+  ↳ app/controllers/carts_controller.rb:82:in `set_current_cart'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carts_controller.rb:82:in `set_current_cart'
+Completed 200 OK in 43ms (Views: 0.2ms | ActiveRecord: 9.3ms | Allocations: 15847)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 15:34:08 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carts_controller.rb:82:in `set_current_cart'
+  [1m[36mCart Create (1.4ms)[0m  [1m[32mINSERT INTO "carts" ("total_price", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["total_price", "0.0"], ["created_at", "2025-02-06 19:34:08.141736"], ["updated_at", "2025-02-06 19:34:08.141736"]]
+  ↳ app/controllers/carts_controller.rb:82:in `set_current_cart'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carts_controller.rb:82:in `set_current_cart'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:19:in `create'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 5.9ms | Allocations: 10383)
+
+
+  
+NoMethodError (undefined method `cart_items' for an instance of Hash):
+  
+app/controllers/carts_controller.rb:25:in `create'
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:46:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:92: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/carts_controller.rb:92: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:47:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:92: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/carts_controller.rb:92: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:47:58 -0400
+  
+SyntaxError (/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:92: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/carts_controller.rb:92: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:51:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/erin/ShoppingCart/tech-interview-backend-entry-level-main/app/controllers/carts_controller.rb:92: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/carts_controller.rb:92: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:53:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `find_or_create_cart'
+Completed 200 OK in 44ms (Views: 0.5ms | ActiveRecord: 8.7ms | Allocations: 13184)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 15:53:28 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `find_or_create_cart'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1337)
+
+
+  
+NameError (undefined local variable or method `product_id' for an instance of CartsController):
+  
+app/controllers/carts_controller.rb:15:in `create'
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 15:56:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `find_or_create_cart'
+Completed 200 OK in 39ms (Views: 0.4ms | ActiveRecord: 7.8ms | Allocations: 13197)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 15:56:18 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:63:in `find_or_create_cart'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1334)
+
+
+  
+NameError (undefined local variable or method `product_id' for an instance of CartsController):
+  
+app/controllers/carts_controller.rb:15:in `create'
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 16:00:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:71:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:71:in `find_or_create_cart'
+Completed 200 OK in 46ms (Views: 0.6ms | ActiveRecord: 7.6ms | Allocations: 13194)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 16:00:41 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:71:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:71:in `find_or_create_cart'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:23:in `create'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.8ms | Allocations: 6144)
+
+
+  
+NoMethodError (undefined method `cart_items' for an instance of Cart):
+  
+app/controllers/carts_controller.rb:81:in `add_product_to_cart'
+app/controllers/carts_controller.rb:29:in `create'
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 16:12:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:71:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:71:in `find_or_create_cart'
+Completed 200 OK in 56ms (Views: 0.5ms | ActiveRecord: 7.6ms | Allocations: 17681)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 16:12:40 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:71:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:71:in `find_or_create_cart'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:23:in `create'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.2ms | Allocations: 6176)
+
+
+  
+NoMethodError (undefined method `cart_items' for an instance of Cart):
+  
+app/controllers/carts_controller.rb:81:in `add_product_to_cart'
+app/controllers/carts_controller.rb:29:in `create'
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 16:12:50 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:71:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:71:in `find_or_create_cart'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:23:in `create'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms | Allocations: 1405)
+
+
+  
+NoMethodError (undefined method `cart_items' for an instance of Cart):
+  
+app/controllers/carts_controller.rb:81:in `add_product_to_cart'
+app/controllers/carts_controller.rb:29:in `create'
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CartItems (20250206203051)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1042603844265157860)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CartItems (20250206203051)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "cart_items" ("id" bigserial primary key, "cart_id" bigint NOT NULL, "product_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_6cdb1f0139"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+, CONSTRAINT "fk_rails_681a180e84"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_cart_id" ON "cart_items" ("cart_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_product_id" ON "cart_items" ("product_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250206203051') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 16:40:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+Completed 404 Not Found in 0ms (ActiveRecord: 5.4ms | Allocations: 181)
+
+
+  
+AbstractController::ActionNotFound (The update action could not be found for the :find_or_create_cart
+callback on CartsController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:182:in `all?'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:109:in `run_callbacks'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 16:42:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:51:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:51:in `find_or_create_cart'
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 8.5ms | Allocations: 18553)
+
+
+  
+NameError (Missing model class CartItem for the Cart#cart_items association. You can specify a different model class with the :class_name option.):
+  
+app/controllers/carts_controller.rb:74:in `cart_response'
+app/controllers/carts_controller.rb:7:in `show'
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 16:44:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:51:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:51:in `find_or_create_cart'
+  [1m[36mCartItem Load (1.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = $1[0m  [["cart_id", 5]]
+  ↳ app/controllers/carts_controller.rb:74:in `map'
+Completed 200 OK in 62ms (Views: 0.2ms | ActiveRecord: 10.5ms | Allocations: 17547)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-02-06 16:44:38 -0400
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 15.1ms | ActiveRecord: 2.8ms | Allocations: 6411)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 16:44:47 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:51:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:51:in `find_or_create_cart'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:19:in `create'
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = $1 AND "cart_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 5], ["product_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:61:in `add_product_to_cart'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carts_controller.rb:61:in `add_product_to_cart'
+  [1m[36mCartItem Create (3.8ms)[0m  [1m[32mINSERT INTO "cart_items" ("cart_id", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["cart_id", 5], ["product_id", 1], ["created_at", "2025-02-06 20:44:47.721002"], ["updated_at", "2025-02-06 20:44:47.721002"]]
+  ↳ app/controllers/carts_controller.rb:61:in `add_product_to_cart'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carts_controller.rb:61:in `add_product_to_cart'
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = $1[0m  [["cart_id", 5]]
+  ↳ app/controllers/carts_controller.rb:74:in `map'
+Completed 201 Created in 28ms (Views: 0.1ms | ActiveRecord: 6.3ms | Allocations: 9938)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-02-06 16:48:22 -0400
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 2.7ms | Allocations: 4783)
+
+
+Started GET "/products" for 127.0.0.1 at 2025-02-06 16:49:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 24.0ms | ActiveRecord: 7.4ms | Allocations: 21351)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 16:49:07 -0400
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:51:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:51:in `find_or_create_cart'
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = $1[0m  [["cart_id", 5]]
+  ↳ app/controllers/carts_controller.rb:74:in `map'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:76:in `block in cart_response'
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 4.5ms | Allocations: 14465)
+
+
+  
+NoMethodError (undefined method `quantity' for an instance of CartItem):
+  
+app/controllers/carts_controller.rb:78:in `block in cart_response'
+app/controllers/carts_controller.rb:74:in `map'
+app/controllers/carts_controller.rb:74:in `cart_response'
+app/controllers/carts_controller.rb:7:in `show'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to AddQuantityToCartItems (20250206205245)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.6ms)[0m  [1m[35mALTER TABLE "cart_items" ADD "quantity" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250206205245') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1042603844265157860)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/products" for 127.0.0.1 at 2025-02-06 18:13:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 28.3ms | ActiveRecord: 10.2ms | Allocations: 21351)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 18:13:55 -0400
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 6061)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 18:19:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 8.0ms | Allocations: 13923)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 18:26:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+  [1m[36mCart Load (1.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carts_controller.rb:57:in `find_or_create_cart'
+  [1m[36mCart Create (4.2ms)[0m  [1m[32mINSERT INTO "carts" ("total_price", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["total_price", "0.0"], ["created_at", "2025-02-06 22:26:56.959760"], ["updated_at", "2025-02-06 22:26:56.959760"]]
+  ↳ app/controllers/carts_controller.rb:57:in `find_or_create_cart'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carts_controller.rb:57:in `find_or_create_cart'
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mCartItem Load (1.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = $1[0m  [["cart_id", 7]]
+  ↳ app/controllers/carts_controller.rb:89:in `map'
+Completed 200 OK in 64ms (Views: 0.2ms | ActiveRecord: 16.8ms | Allocations: 19258)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 18:27:08 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:20:in `create'
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = $1 AND "cart_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 7], ["product_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:69:in `add_product_to_cart'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.0ms | Allocations: 12638)
+
+
+  
+NoMethodError (undefined method `+' for nil):
+  
+app/controllers/carts_controller.rb:70:in `add_product_to_cart'
+app/controllers/carts_controller.rb:26:in `create'
+Started GET "/products" for 127.0.0.1 at 2025-02-06 18:35:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 23.4ms | ActiveRecord: 7.4ms | Allocations: 21356)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 18:35:39 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:20:in `create'
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = $1 AND "cart_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 7], ["product_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:69:in `add_product_to_cart'
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 4.8ms | Allocations: 14275)
+
+
+  
+NoMethodError (undefined method `+' for nil):
+  
+app/controllers/carts_controller.rb:70:in `add_product_to_cart'
+app/controllers/carts_controller.rb:26:in `create'
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 18:35:47 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:20:in `create'
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = $1 AND "cart_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 7], ["product_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:69:in `add_product_to_cart'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 6.0ms | Allocations: 11409)
+
+
+  
+NoMethodError (undefined method `+' for nil):
+  
+app/controllers/carts_controller.rb:70:in `add_product_to_cart'
+app/controllers/carts_controller.rb:26:in `create'
+Started GET "/products" for 127.0.0.1 at 2025-02-06 18:40:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 22.4ms | ActiveRecord: 7.9ms | Allocations: 21385)
+
+
+Started GET "/cart" for 127.0.0.1 at 2025-02-06 18:40:32 -0400
+Processing by CartsController#show as */*
+  Parameters: {"cart"=>{}}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = $1[0m  [["cart_id", 7]]
+  ↳ app/controllers/carts_controller.rb:88:in `map'
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 4.6ms | Allocations: 9668)
+
+
+Started POST "/cart" for 127.0.0.1 at 2025-02-06 18:40:44 -0400
+Processing by CartsController#create as */*
+  Parameters: {"product_id"=>1, "quantity"=>2, "cart"=>{}}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53:in `find_or_create_cart'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:20:in `create'
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = $1 AND "cart_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 7], ["product_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:69:in `add_product_to_cart'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms | Allocations: 7528)
+
+
+  
+NoMethodError (undefined method `+' for nil):
+  
+app/controllers/carts_controller.rb:70:in `add_product_to_cart'
+app/controllers/carts_controller.rb:26:in `create'
