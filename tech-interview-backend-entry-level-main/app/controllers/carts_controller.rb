@@ -42,8 +42,7 @@ class CartsController < ApplicationController
 
   # DELETE /cart/empty - Remove carrinhos abandonados
   def cleanup_abandoned
-    abandoned_carts = Cart.where("updated_at < ?", 3.hours.ago)
-    abandoned_carts.destroy_all
+    Cart.abandonados.destroy_all
     head :no_content
   end
 
@@ -66,8 +65,8 @@ class CartsController < ApplicationController
   #end
 
   def add_product_to_cart(cart, product, quantity)
-    item = CartItem.find_or_initialize_by(cart: cart, product: product)
-    item.quantity += (item.quantity || 0) + quantity
+    item = CartItem.find_or_initialize_by(cart: cart, product: product) #inivialzia
+    item.quantity = (item.quantity || 0) + quantity
     if item.save!
       update_cart_total(@cart)
       render json: cart_response(cart), status: :created
@@ -77,8 +76,9 @@ class CartsController < ApplicationController
   end
 
   def update_cart_total(cart)
-    total = cart.cart_items.sum { |item| item.quantity * item.product.price }
-    cart.update(total_price: total)
+    #total = cart.cart_items.sum { |item| item.quantity * item.product.price }
+    #cart.update(total_price: total)
+    cart.update_total_price # ver se mando parametro PRA CLASSE!!!!!
   end
 
   # Constrói a resposta do carrinho

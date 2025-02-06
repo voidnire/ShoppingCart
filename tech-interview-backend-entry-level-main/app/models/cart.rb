@@ -5,6 +5,7 @@ class Cart < ApplicationRecord
   validates_numericality_of :total_price, greater_than_or_equal_to: 0
 
   before_save :marcar_abandonado_se_preciso
+  #before_save :update_total_price
 
   # Definir escopos com base em `updated_at`, pois não há `status`
   scope :abandonados, -> { where("updated_at < ?", 3.hours.ago) }
@@ -18,6 +19,12 @@ class Cart < ApplicationRecord
   # Remover carrinhos abandonados há mais de 7 dias
   def self.remover_abandonados!
     expirados.delete_all
+  end
+
+  def update_total_price
+    total = cart_items.sum { |item| item.quantity * item.product.price }
+
+    update(total_price: total)
   end
 
   private
