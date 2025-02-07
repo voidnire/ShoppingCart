@@ -6,14 +6,14 @@ Rails.application.routes.draw do
   resources :products
 
   # cart routes
-  resources :carts, only: [:show, :create] do
+  resources :cart, only: [:show, :create] do
     member do
-      delete ":product_id", to: "carts#destroy" #
+      delete ":product_id", to: "carts#destroy" # Rota para remover um produto do carrinho
     end
 
     collection do
-      delete "cleanup_abandoned", to: "carts#cleanup_abandoned"
-    end #tirar dps
+      patch "add_item", to: "carts#update" # Rota personalizada para atualizar a quantidade de um produto
+    end
   end
 
   get "up" => "rails/health#show", as: :rails_health_check

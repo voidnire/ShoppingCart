@@ -1631,3 +1631,7 @@ Started GET "/favicon.ico" for 127.0.0.1 at 2025-02-06 19:44:35 -0400
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   
+🛒 Iniciando marcação de carrinhos abandonados...
+  [1m[36mCart Update All (4.3ms)[0m  [1m[33mUPDATE "carts" SET "total_price" = $1 WHERE (updated_at < '2025-02-07 15:56:39.743999')[0m  [["total_price", "0.0"]]
+  [1m[36mCart Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "carts" WHERE (updated_at < '2025-02-07 15:56:39.743999')[0m
+✔️ 4 carrinhos marcados como abandonados.

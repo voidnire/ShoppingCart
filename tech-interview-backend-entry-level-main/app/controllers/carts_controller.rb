@@ -1,13 +1,13 @@
 class CartsController < ApplicationController
-  before_action :find_or_create_cart, only: %i[show create destroy]
+  before_action :find_or_create_cart, only: %i[show create destroy update]
 
-  # GET /cart/1
+  # GET ⏩ /cart
   def show
     @cart = find_or_create_cart
     render json: cart_response(@cart)
   end
 
-  # POST /cart - Adiciona um produto ao carrinho
+  # ⏩ POST /cart - Adiciona um produto ao carrinho
   def create
     product_id = params[:product_id]
     quantity = params[:quantity].to_i
@@ -26,7 +26,7 @@ class CartsController < ApplicationController
     add_product_to_cart(@cart, product, quantity)
   end
 
-  # DELETE /cart/:product_id - Remove um produto do carrinho
+  # ⏩ DELETE /cart/:product_id - Remove um produto do carrinho
   def destroy
     product_id = params[:product_id]
     item = CartItem.find_by(cart: @cart, product_id: product_id)
@@ -40,10 +40,28 @@ class CartsController < ApplicationController
     #render json: cart_response(@cart)
   end
 
-  # DELETE /cart/empty - Remove carrinhos abandonados
-  def cleanup_abandoned
-    Cart.abandonados.destroy_all
-    head :no_content
+  # ⏩ PATCH /cart/add_item - Atualiza a quantidade de um produto no carrinho
+  def update
+    product_id = params[:product_id]
+    new_quantity = params[:quantity].to_i
+
+    unless product_id
+      return render json: { error: "Parâmetro product_id é obrigatório" }, status: :bad_request
+    end
+
+    unless new_quantity.positive?
+      return render json: { error: "A quantidade deve ser maior que zero" }, status: :unprocessable_entity
+    end
+
+    item = CartItem.find_by(cart: @cart, product_id: product_id)
+
+    unless item
+      return render json: { error: "Produto não encontrado no carrinho" }, status: :not_found
+    end
+
+    item.update!(quantity: new_quantity)
+
+    render json: cart_response(@cart)
   end
 
   private
@@ -57,12 +75,6 @@ class CartsController < ApplicationController
     session[:cart_id] = cart.id
     cart
   end
-
-  #def create_new_cart
-  #  cart = Cart.create
-  #  session[:cart_id] = cart.id
-  #  cart
-  #end
 
   def add_product_to_cart(cart, product, quantity)
     item = CartItem.find_or_initialize_by(cart: cart, product: product) #inivialzia
