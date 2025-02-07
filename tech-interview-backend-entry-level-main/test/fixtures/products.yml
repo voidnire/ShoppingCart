@@ -1,0 +1,11 @@
+one:
+  name: "Test Product"
+  price: 9.99
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+two:
+  name: "Another Product"
+  price: 19.99
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

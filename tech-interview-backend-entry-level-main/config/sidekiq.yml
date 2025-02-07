@@ -1,0 +1,19 @@
+:concurrency: 3
+:timeout: 60
+:verbose: true
+:queues:
+  - critical
+  - default
+  - mailers
+  - active_storage_analysis
+  - active_storage_purge
+:scheduler:
+  :schedule:
+    mark_cart_as_abandoned:
+      cron: "0 * * * *"  # Roda a cada 1 hora
+      class: "MarkCartAsAbandonedJob"
+      queue: default
+    remove_abandoned_carts:
+      cron: "0 0 * * *"  # Roda todos os dias à meia-noite
+      class: "RemoveAbandonedCartsJob"
+      queue: default
