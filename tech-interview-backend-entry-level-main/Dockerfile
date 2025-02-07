@@ -17,6 +17,11 @@ ENV RAILS_ENV="development" \
 # Throw-away build stage to reduce size of final image
 FROM base as build
 
+# Run and own only the runtime files as a non-root user for security
+RUN useradd rails --create-home --shell /bin/bash && \
+    mkdir -p /rails/db /rails/log /rails/storage /rails/tmp && \
+    chown -R rails:rails /rails/db /rails/log /rails/storage /rails/tmp
+
 # Install packages needed to build gems
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git libpq-dev libvips pkg-config
