@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
   before_action :find_or_create_cart, only: %i[show create destroy update]
 
-  # GET ⏩ /cart
+  # ⏩ GET  /cart
   def show
     @cart = find_or_create_cart
     render json: cart_response(@cart)
@@ -24,20 +24,6 @@ class CartsController < ApplicationController
     end
 
     add_product_to_cart(@cart, product, quantity)
-  end
-
-  # ⏩ DELETE /cart/:product_id - Remove um produto do carrinho
-  def destroy
-    product_id = params[:product_id]
-    item = CartItem.find_by(cart: @cart, product_id: product_id)
-
-    unless item
-      return render json: { error: "Produto não encontrado no carrinho" }, status: :not_found
-    end
-
-    item.destroy
-    #update_cart_total(@cart)
-    #render json: cart_response(@cart)
   end
 
   # ⏩ PATCH /cart/add_item - Atualiza a quantidade de um produto no carrinho
@@ -64,15 +50,35 @@ class CartsController < ApplicationController
     render json: cart_response(@cart)
   end
 
+  # ⏩ DELETE /cart/:product_id - Remove um produto do carrinho
+  def destroy
+    product_id = params[:product_id]
+    item = CartItem.find_by(cart: @cart, product_id: product_id)
+
+    unless item
+      return render json: { error: "Produto não encontrado no carrinho" }, status: :not_found
+    end
+
+    item.destroy
+    #update_cart_total(@cart)
+    render json: { message: "Produto removido do carrinho." }
+  end
+
   private
 
   def find_or_create_cart
-    cart = Cart.find_by(id: session[:cart_id])
-    return cart if cart.present?
+    cart_id = session[:cart_id] || cookies[:cart_id] # Busca pelo ID na sessão ou cookie
 
-    cart = Cart.new(total_price: 0.0)
-    cart.save! # Garante que o ID seja gerado corretamente
+    if cart_id
+      cart = Cart.find_by(id: cart_id)
+      return cart if cart.present?
+    end
+
+    # Se não existir, cria um novo carrinho e salva na sessão e cookie
+    cart = Cart.create!(total_price: 0.0)
     session[:cart_id] = cart.id
+    cookies[:cart_id] = cart.id # Armazena no cookie para testes
+
     cart
   end
 

@@ -139,7 +139,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     puts ""
   end
 
-  # ----------------------- PATCH/PUT TESTS -------------------------
+  # ----------------------- DELETE TESTS -------------------------
 
   test "should delete product" do
     puts ""

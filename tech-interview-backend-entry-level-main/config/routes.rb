@@ -7,12 +7,9 @@ Rails.application.routes.draw do
 
   # cart routes
   resources :cart, only: [:show, :create] do
-    member do
-      delete ":product_id", to: "carts#destroy" # Rota para remover um produto do carrinho
-    end
-
     collection do
-      patch "add_item", to: "carts#update" # Rota personalizada para atualizar a quantidade de um produto
+      delete ":product_id", to: "carts#destroy" # remover um produto do carrinho
+      patch "add_item", to: "carts#update" # atualizar a quantidade de um produto
     end
   end
 
